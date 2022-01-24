@@ -17,7 +17,7 @@
         <div class="input-underline"></div>
         <label>密码</label>
       </el-form-item>
-      <el-form-item prop="securityCode" inline="true" class="security-code-box">
+      <!-- <el-form-item prop="securityCode" inline="true" class="security-code-box">
         <input
           type="text"
           autocomplete="false"
@@ -33,7 +33,7 @@
           @click="getSecurityCode"
           >获取验证码</el-button
         >
-      </el-form-item>
+      </el-form-item> -->
       <el-form-item>
         <el-button type="primary" @click="submitLogin">登录</el-button>
       </el-form-item>
@@ -50,7 +50,7 @@ export default {
       loginForm: {
         account: "",
         password: "",
-        securityCode: "",
+        // securityCode: "",
       },
     };
   },

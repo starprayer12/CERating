@@ -58,7 +58,7 @@ export default {
     toRegister() {
       document.getElementsByClassName("right-footer-login-box")[0].setAttribute("style","display:none");
       document.getElementsByClassName("right-footer-register-box")[0].setAttribute("style","display");
-      document.getElementsByClassName("right-container")[0].setAttribute("style", "height:500px; margin-top: -290px");
+      document.getElementsByClassName("right-container")[0].setAttribute("style", "height:520px; margin-top: -290px");
       this.loginOrRegister = "RegisterForm";
     },
     toLogin() {

@@ -15,12 +15,21 @@
       <el-form-item prop="businessType1">
         <div class="businessType1-box">
           <label>企业类型</label>
-          <select name="businessType1">
-            <option value="industry">工业</option>
-            <option value="agriculture">农业</option>
-            <option value="business">商业</option>
-            <option value="tourism">旅行业</option>
-          </select>
+          <div class="dropdown">
+            <input
+              type="text"
+              class="dropdown-textbox"
+              placeholder="请选择"
+              @click="dropdown_list()"
+              readonly
+            />
+            <div class="dropdown-option">
+              <div @click="dropdown_selected('工业')">工业</div>
+              <div @click="dropdown_selected('农业')">农业</div>
+              <div @click="dropdown_selected('商业')">商业</div>
+              <div @click="dropdown_selected('旅行业')">旅行业</div>
+            </div>
+          </div>
         </div>
       </el-form-item>
       <el-form-item prop="businessType2">
@@ -82,7 +91,7 @@
         >
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="submitregister">注册</el-button>
+        <el-button type="primary" @click="submitRegister">注册</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -108,8 +117,15 @@ export default {
     getSecurityCode() {
       alert("获取验证码");
     },
-    submitregister() {
+    submitRegister() {
       alert("register");
+    },
+    dropdown_selected(selectName) {
+      document.querySelector('.dropdown-textbox').value = selectName;
+      document.querySelector('.dropdown').classList.toggle('active');
+    },
+    dropdown_list() {
+      document.querySelector('.dropdown').classList.toggle('active');
     },
   },
 };
@@ -166,18 +182,62 @@ export default {
   position: relative;
   left: 0;
   bottom: 0;
+  top: 0.4rem;
 }
-.businessType1-box select {
-  /*清除select的边框样式*/
-  border: none;
-  /*清除select聚焦时候的边框颜色*/
-  outline: none;
-  /*将select的宽高等于div的宽高*/
-  width: 60%;
+.businessType1-box input{
   text-align: center;
-  color: rgba(65, 65, 65, 0.8);
-  font-size: 1rem;
-  background: rgba(39, 39, 41, 0.025);
+  padding: 0 0.5rem;
+  width: 120%;
+  margin-left: -30px;
+}
+.businessType1-box .dropdown::before {
+  content: '';
+  position: absolute;
+  right: 2.2rem;
+  top: 1rem;
+  z-index: 100;
+  width: 8px;
+  height: 8px;
+  border: 1.2px solid rgba(65, 65, 65, 0.7);
+  border-top: 0;
+  border-right: 0;
+  transform: rotate(-45deg);
+  transition: 0.4s;
+  pointer-events: none;
+}
+.businessType1-box .active::before{
+  top: 1.2rem;
+  transform: rotate(-225deg);
+}
+.businessType1-box .dropdown-option {
+  position: absolute;
+  top: 50px;
+  width: 58%;
+  right: 18px;
+  height: 120px;
+  background: rgba(248, 248, 248, 0.877);
+  box-shadow: 0 10px 10px rgba(180, 180, 180, 0.3);
+  border-radius: 5px;
+  overflow-y: scroll;
+  z-index: 100;
+  display: none;
+}
+.businessType1-box .active .dropdown-option {
+  display: flex;
+  flex-direction: column;
+}
+/* 隐藏滚动条 */
+.businessType1-box .active .dropdown-option::-webkit-scrollbar{
+  display: none;
+}
+.businessType1-box .dropdown-option div{
+  padding: 0.3rem;
+  text-align: center;
+  cursor: pointer;
+  color: rgba(65, 65, 65, 0.7);
+}
+.businessType1-box .dropdown-option div:hover{
+  background: rgba(133, 171, 247, 0.65);
 }
 .businessType2-box {
   display: flex;
