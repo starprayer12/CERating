@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']#都可访问
 
+APPEND_SLASH=False
 
 # Application definition
 
