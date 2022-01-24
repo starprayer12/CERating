@@ -77,13 +77,24 @@ WSGI_APPLICATION = 'CERating_Server.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'huaqi',
+#         'USER': 'root',
+#         'PASSWORD': 'password',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'huaqi',
+        'NAME': 'Citi',
         'USER': 'root',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
+        'PASSWORD': 'Citi123456.',
+        'HOST': '47.99.45.238',
         'PORT': '3306',
     }
 }
