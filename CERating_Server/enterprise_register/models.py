@@ -10,7 +10,6 @@ class Emailcheck(models.Model):
         managed = False
         db_table = 'emailcheck'
 
-
 class Enterprise(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=64, blank=True, null=True)
