@@ -20,5 +20,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.hello, name='index'),
-    re_path(r'/email_request', views.email_verification_code, name='emailVerification')
+    path('/email_request', views.email_verification_code, name='emailVerification')
 ]
