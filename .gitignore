@@ -1,4 +1,3 @@
-/CERating_Server/CERating_Server/__pycache__/*
-/CERating_WebPage/node_modules/*
-/CERating_Server/.idea/*
-/CERating_WebPage/.idea/*
+/**/__pycache__/*
+/**/node_modules/*
+/**/.idea/*
