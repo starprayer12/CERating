@@ -81,7 +81,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': 3306,
         'USER': 'root',
-        'PASSWORD': 'ycy253255'
+        'PASSWORD': 'Citi123456.'
     }
 }
 
@@ -132,4 +132,4 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.163.com'
 EMAIL_PORT = 25
 EMAIL_HOST_USER = 'cerating@163.com'
-EMAIL_HOST_PASSWORD = 'CERating123456'
+EMAIL_HOST_PASSWORD = 'CERating123'
