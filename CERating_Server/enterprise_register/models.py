@@ -8,7 +8,7 @@ class Emailcheck(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'Emailcheck'
+        db_table = 'emailcheck'
 
 class Enterprise(models.Model):
     id = models.IntegerField(primary_key=True)
