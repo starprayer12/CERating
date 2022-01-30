@@ -22,4 +22,5 @@ urlpatterns = [
     path('', views.hello, name='index'),
     path('email_request/', views.email_verification_code),
     path('enterprise_register/',include("enterprise_register.urls")),
+    path('', include('web.urls'))
 ]
