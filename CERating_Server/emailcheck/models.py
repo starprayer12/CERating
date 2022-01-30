@@ -7,7 +7,7 @@ class Emailcheck(models.Model):
     timestamp = models.IntegerField(blank=True, null=True)
 
     class Meta:
-        db_table = 'emailcheck'
+        db_table = 'Emailcheck'
 
 
 class Enterprise(models.Model):
