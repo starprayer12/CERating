@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-0indf%a8v+%m4btc9+ls1^b01htvcfr!t%=ws-0dz1_7vtm3k0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -78,7 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Citi',
-        'HOST': '47.99.45.238',
+        'HOST': '127.0.0.1',
         'PORT': 3306,
         'USER': 'root',
         'PASSWORD': 'Citi123456.'
@@ -130,6 +130,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # 邮件配置
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.163.com'
-EMAIL_PORT = 25
+EMAIL_PORT = 465
 EMAIL_HOST_USER = 'cerating@163.com'
 EMAIL_HOST_PASSWORD = 'CERating123'
+EMAIL_USE_SSL = True
