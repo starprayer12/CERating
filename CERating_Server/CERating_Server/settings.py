@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'enterprise_register'
+    'enterprise_register',
+    'emailcheck',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 邮件配置
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'cerating@163.com'
+EMAIL_HOST_PASSWORD = 'CERating123'
+EMAIL_USE_SSL = True
