@@ -78,7 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Citi',
-        'HOST': '127.0.0.1',
+        'HOST': '47.99.45.238',
         'PORT': 3306,
         'USER': 'root',
         'PASSWORD': 'Citi123456.'
