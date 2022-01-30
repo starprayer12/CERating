@@ -28,7 +28,8 @@ def Enterprise_Register(request):
     else:
         oob = Emailcheck.objects.get(email=em)
         print(oob.code)
-        if(str(oob.code) != str(ca)):
+        print(ca)
+        if(oob.code != ca):
             data = {"code":2}
             return JsonResponse(data)#验证码不同，返回2
         else: 
