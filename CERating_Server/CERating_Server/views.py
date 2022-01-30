@@ -14,6 +14,7 @@ def hello(request):
 @csrf_exempt
 def email_verification_code(request):
     if request.method == 'POST':
+        print("email")
         email = request.POST['email']  # 邮箱
         code = str(uuid.uuid1().int)[:6]  # 验证码
         timestamp = time.time() + 180  # 过期时间戳
