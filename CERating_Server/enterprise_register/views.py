@@ -27,11 +27,8 @@ def Enterprise_Register(request):
     #若不存在，则进行注册，判断验证码是否相同
     else:
         oob = Emailcheck.objects.get(email=em)
-        print("====")
         print(oob.code)
-        print(ca)
-        print("====")
-        if(oob.code != ca):
+        if(str(oob.code) != ca):
             data = {"code":2}
             return JsonResponse(data)#验证码不同，返回2
         else: 
